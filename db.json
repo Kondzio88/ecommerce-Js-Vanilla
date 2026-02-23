@@ -1,0 +1,31 @@
+{
+    "clothes": [
+      {
+        "id": "1",
+        "brand": "Zara",
+        "name": "Klasyczna Biała Koszula",
+        "category": "shirts",
+        "price": 129.99,
+        "sizes": ["S", "M", "L", "XL"],
+        "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&q=80"
+      },
+      {
+        "id": "2",
+        "brand": "H&M",
+        "name": "Kurtka Jeansowa Vintage",
+        "category": "jackets",
+        "price": 199.50,
+        "sizes": ["M", "L"],
+        "image": "https://images.unsplash.com/photo-1495105787522-5334e3ffa0e1?w=500&q=80"
+      },
+      {
+        "id": "3",
+        "brand": "Nike",
+        "name": "Czarne Spodnie Dresowe",
+        "category": "pants",
+        "price": 149.00,
+        "sizes": ["S", "M", "L"],
+        "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&q=80"
+      }
+    ]
+  }

@@ -13,3 +13,31 @@ const modalCloseFunc = () => {
 // modale eventListener
 modalCloseOverlay.addEventListener('click',modalCloseFunc)
 modalCloseBtn.addEventListener('click',modalCloseFunc)
+
+// notification toast variables
+
+const notificationToast = document.querySelector('[data-toast]')
+const toatsCloseBtn = document.querySelector('[data-toast-close]')
+
+// notification toast eventListener
+
+toatsCloseBtn.addEventListener('click', ()=> {
+    notificationToast.classList.add('closed')
+})
+
+// fake Api
+const KEY = 'http://localhost:3000/clothes'
+
+
+ async function fetchApi(key){
+    const response = await fetch(key)
+    const data = await response.json()
+   console.log(data);
+    for(const item of data){
+        console.log(item);
+
+    }
+    return data
+ }
+
+ fetchApi(KEY)
