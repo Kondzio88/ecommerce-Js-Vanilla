@@ -1,4 +1,5 @@
-'use strict'
+
+
 
 // modal variables
 const modal = document.querySelector('[data-modal]')
@@ -11,8 +12,8 @@ const modalCloseFunc = () => {
 }
 
 // modale eventListener
-modalCloseOverlay.addEventListener('click',modalCloseFunc)
-modalCloseBtn.addEventListener('click',modalCloseFunc)
+modalCloseOverlay.addEventListener('click', modalCloseFunc)
+modalCloseBtn.addEventListener('click', modalCloseFunc)
 
 // notification toast variables
 
@@ -21,23 +22,21 @@ const toatsCloseBtn = document.querySelector('[data-toast-close]')
 
 // notification toast eventListener
 
-toatsCloseBtn.addEventListener('click', ()=> {
+toatsCloseBtn.addEventListener('click', () => {
     notificationToast.classList.add('closed')
 })
 
 // fake Api
-const KEY = 'http://localhost:3000/clothes'
 
+async function pobierzBaze() {
 
- async function fetchApi(key){
-    const response = await fetch(key)
-    const data = await response.json()
-   console.log(data);
-    for(const item of data){
-        console.log(item);
-
+    try {
+        const response = await fetch('./db.json');
+        const result = await response.json();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
     }
-    return data
- }
+}
+pobierzBaze();
 
- fetchApi(KEY)
