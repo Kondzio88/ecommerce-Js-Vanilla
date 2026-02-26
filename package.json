@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "app.js",
 	"scripts": {
-		"server": "json-server db.json --port 3000",
+		
 		"frontend": "live-server --port=5500",
 		"dev": "concurrently \"npm run server\" \"npm run frontend\""
 	},
